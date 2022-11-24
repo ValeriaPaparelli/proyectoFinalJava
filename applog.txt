@@ -1,0 +1,16 @@
+INFO    2022-11-23 12:08:23,558 [http-nio-8080-exec-1] com.proyectTest.proyectTest.controller.PatientController  - Esto es un mensaje
+INFO    2022-11-23 15:29:59,529 [http-nio-8080-exec-4] com.proyectTest.proyectTest.controller.DentistController  - Esto es un mensaje
+INFO    2022-11-23 15:32:45,818 [http-nio-8080-exec-1] com.proyectTest.proyectTest.controller.DentistController  - Esto es un mensaje
+INFO    2022-11-23 16:03:22,499 [http-nio-8080-exec-4] com.proyectTest.proyectTest.controller.PatientController  - Esto es un mensaje
+INFO    2022-11-23 16:04:01,658 [http-nio-8080-exec-1] com.proyectTest.proyectTest.controller.PatientController  - Esto es un mensaje
+INFO    2022-11-23 16:04:04,320 [http-nio-8080-exec-4] com.proyectTest.proyectTest.controller.PatientController  - Esto es un mensaje
+INFO    2022-11-23 16:05:26,567 [http-nio-8080-exec-2] com.proyectTest.proyectTest.controller.PatientController  - Esto es un mensaje
+INFO    2022-11-23 16:07:47,924 [http-nio-8080-exec-2] com.proyectTest.proyectTest.controller.PatientController  - Esto es un mensaje
+INFO    2022-11-23 16:08:02,731 [http-nio-8080-exec-4] com.proyectTest.proyectTest.controller.DentistController  - Esto es un mensaje
+INFO    2022-11-23 16:08:14,843 [http-nio-8080-exec-5] com.proyectTest.proyectTest.controller.PatientController  - Esto es un mensaje
+INFO    2022-11-23 16:08:56,922 [http-nio-8080-exec-6] com.proyectTest.proyectTest.controller.PatientController  - Esto es un mensaje
+INFO    2022-11-23 16:09:07,542 [http-nio-8080-exec-7] com.proyectTest.proyectTest.controller.DentistController  - Esto es un mensaje
+INFO    2022-11-23 16:09:47,094 [http-nio-8080-exec-2] com.proyectTest.proyectTest.controller.PatientController  - Esto es un mensaje
+INFO    2022-11-23 16:09:50,772 [http-nio-8080-exec-3] com.proyectTest.proyectTest.controller.DentistController  - Esto es un mensaje
+INFO    2022-11-23 16:10:09,423 [http-nio-8080-exec-6] com.proyectTest.proyectTest.controller.DentistController  - Esto es un mensaje
+INFO    2022-11-23 16:10:18,148 [http-nio-8080-exec-7] com.proyectTest.proyectTest.controller.PatientController  - Esto es un mensaje
