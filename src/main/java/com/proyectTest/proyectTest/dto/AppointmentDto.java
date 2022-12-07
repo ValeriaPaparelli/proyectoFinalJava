@@ -1,23 +1,23 @@
 package com.proyectTest.proyectTest.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.proyectTest.proyectTest.entity.Appointment;
+import com.proyectTest.proyectTest.entity.Dentist;
+import com.proyectTest.proyectTest.entity.Patient;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.Set;
 
 @AllArgsConstructor
 @Getter
 @Setter
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class DentistDto {
+public class AppointmentDto {
 
     private int id;
-    private String lastname;
-    private String name;
+    private String date;
+    private Patient patient;
+    private Dentist dentist;
 
-    public DentistDto() {
+    public AppointmentDto() {
     }
 }

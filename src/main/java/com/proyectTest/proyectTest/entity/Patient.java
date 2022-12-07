@@ -1,5 +1,6 @@
 package com.proyectTest.proyectTest.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,18 +18,14 @@ public class Patient {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    @Column(name="lastname")
     private String lastname;
-    @Column(name="name")
     private String name;
-    @Column(name="address")
     private String address;
-    @Column(name="dni")
     private int dni;
-    @Column(name="registration_date")
     private String registration_date;
 
     @OneToMany(mappedBy = "patient", fetch = FetchType.LAZY)
+    @JsonIgnore
     private Set<Appointment> appointments = new HashSet<>();
 
     public Patient() {

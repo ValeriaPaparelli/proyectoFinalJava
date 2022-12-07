@@ -1,0 +1,4 @@
+[2022-12-0623:39:52] [ ERROR] [GlobalExceptionHandler:17] Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "p"
+[2022-12-0623:41:45] [ ERROR] [GlobalExceptionHandler:17] Request method 'PUT' not supported
+[2022-12-0623:42:00] [ ERROR] [GlobalExceptionHandler:17] Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "q"
+[2022-12-0623:42:09] [ ERROR] [GlobalExceptionHandler:17] No class com.proyectTest.proyectTest.entity.Patient entity with id 7 exists!

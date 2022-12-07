@@ -3,7 +3,6 @@ package com.proyectTest.proyectTest.controller;
 import com.proyectTest.proyectTest.entity.Patient;
 import com.proyectTest.proyectTest.service.PatientService;
 import com.proyectTest.proyectTest.dto.PatientDto;
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +12,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/patient")
 public class PatientController {
-    private static final Logger LOGGER = Logger.getLogger(PatientController.class);
     private final PatientService patientService;
 
     @Autowired
@@ -23,7 +21,6 @@ public class PatientController {
 
     @GetMapping()
     public ResponseEntity<List<PatientDto>> getAll() {
-        LOGGER.info("Esto es un mensaje");
         return ResponseEntity.ok(patientService.getAll());
     }
 

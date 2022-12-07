@@ -17,12 +17,12 @@ public class Appointment {
     private int id;
     private String date;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="patient_id")
+    @ManyToOne()
+    @JoinColumn(name="patient_id", nullable = false)
     private Patient patient;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="dentist_id")
+    @ManyToOne()
+    @JoinColumn(name="dentist_id", nullable = false)
     private Dentist dentist;
 
     public Appointment() {
