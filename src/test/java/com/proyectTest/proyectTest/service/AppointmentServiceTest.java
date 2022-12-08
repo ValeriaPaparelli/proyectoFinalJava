@@ -22,7 +22,7 @@ public class AppointmentServiceTest {
         dentist.setId(1);
 
         Patient patient = new Patient();
-        patient.setId(3);
+        patient.setId(1);
 
         Appointment appointment = new Appointment();
         appointment.setDate("2022-10-04");
@@ -31,12 +31,12 @@ public class AppointmentServiceTest {
 
         appointmentService.create(appointment);
 
-        Optional<AppointmentDto> appointmentDB = appointmentService.getById(6);
+        Optional<AppointmentDto> appointmentDB = appointmentService.getById(2);
 
         assertTrue(appointmentDB.isPresent());
         assertEquals(appointment.getDate(), "2022-10-04");
         assertEquals(appointment.getDentist().getId(), 1);
-        assertEquals(appointment.getPatient().getId(), 3);
+        assertEquals(appointment.getPatient().getId(), 1);
     }
 
 }

@@ -25,7 +25,7 @@ public class PatientServiceTest {
 
         patientService.create(patient);
 
-        Optional<PatientDto> patientDB = patientService.getById(3);
+        Optional<PatientDto> patientDB = patientService.getById(1);
 
         assertTrue(patientDB.isPresent());
     }
@@ -33,7 +33,7 @@ public class PatientServiceTest {
     @Test
     public void updatePatientTest(){
         Patient patientUpdate = new Patient();
-        patientUpdate.setId(3);
+        patientUpdate.setId(1);
         patientUpdate.setLastname("Ramirez");
         patientUpdate.setName("Matias");
         patientUpdate.setAddress("San Martin 3489");
@@ -42,7 +42,7 @@ public class PatientServiceTest {
 
         patientService.update(patientUpdate);
 
-        Optional<PatientDto> patientDB = patientService.getById(3);
+        Optional<PatientDto> patientDB = patientService.getById(1);
 
         assertTrue(patientDB.get().getLastname().equals("Ramirez"));
         assertTrue(patientDB.get().getName().equals("Matias"));
