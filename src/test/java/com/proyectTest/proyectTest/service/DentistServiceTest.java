@@ -29,6 +29,13 @@ public class DentistServiceTest {
 
     @Test
     public void updateDentistTest(){
+        Dentist dentist = new Dentist();
+        dentist.setLastname("Dominguez");
+        dentist.setName("Omar");
+        dentist.setMedical_registration(124563);
+
+        dentistService.create(dentist);
+
         Dentist dentistUpdate = new Dentist();
         dentistUpdate.setId(1);
         dentistUpdate.setLastname("Domingues");

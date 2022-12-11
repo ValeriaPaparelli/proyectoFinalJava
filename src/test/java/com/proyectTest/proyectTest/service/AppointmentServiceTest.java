@@ -16,27 +16,45 @@ public class AppointmentServiceTest {
     @Autowired
     private AppointmentService appointmentService;
 
+    @Autowired
+    private DentistService dentistService;
+
+    @Autowired
+    private PatientService patientService;
+
     @Test
     public void createAppointmentTest(){
         Dentist dentist = new Dentist();
-        dentist.setId(1);
+        dentist.setLastname("Dominguez");
+        dentist.setName("Omar");
+        dentist.setMedical_registration(124563);
+
+        dentistService.create(dentist);
 
         Patient patient = new Patient();
-        patient.setId(3);
+        patient.setLastname("Rodriguez");
+        patient.setName("Mateo");
+        patient.setAddress("Aranguren 367");
+        patient.setRegistration_date("2020-02-12");
+        patient.setDni(32456178);
+
+        patientService.create(patient);
 
         Appointment appointment = new Appointment();
         appointment.setDate("2022-10-04");
+
+        dentist.setId(1);
         appointment.setDentist(dentist);
+
+        patient.setId(1);
         appointment.setPatient(patient);
 
         appointmentService.create(appointment);
 
-        Optional<AppointmentDto> appointmentDB = appointmentService.getById(6);
+        Optional<AppointmentDto> appointmentDB = appointmentService.getById(1);
 
         assertTrue(appointmentDB.isPresent());
         assertEquals(appointment.getDate(), "2022-10-04");
-        assertEquals(appointment.getDentist().getId(), 1);
-        assertEquals(appointment.getPatient().getId(), 3);
     }
 
 }
