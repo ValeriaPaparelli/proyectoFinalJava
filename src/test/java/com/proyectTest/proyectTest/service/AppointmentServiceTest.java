@@ -24,30 +24,16 @@ public class AppointmentServiceTest {
 
     @Test
     public void createAppointmentTest(){
-        Dentist dentist = new Dentist();
-        dentist.setLastname("Dominguez");
-        dentist.setName("Omar");
-        dentist.setMedical_registration(124563);
-
-        dentistService.create(dentist);
-
-        Patient patient = new Patient();
-        patient.setLastname("Rodriguez");
-        patient.setName("Mateo");
-        patient.setAddress("Aranguren 367");
-        patient.setRegistration_date("2020-02-12");
-        patient.setDni(32456178);
-
-        patientService.create(patient);
-
         Appointment appointment = new Appointment();
         appointment.setDate("2022-10-04");
 
-        dentist.setId(1);
-        appointment.setDentist(dentist);
+        Dentist dentistAppointment = new Dentist();
+        dentistAppointment.setId(1);
+        appointment.setDentist(dentistAppointment);
 
-        patient.setId(1);
-        appointment.setPatient(patient);
+        Patient patientAppointment = new Patient();
+        patientAppointment.setId(1);
+        appointment.setPatient(patientAppointment);
 
         appointmentService.create(appointment);
 
