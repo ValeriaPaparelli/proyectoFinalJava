@@ -8,13 +8,13 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public interface AppointmentRepository extends JpaRepository<Appointment, Integer> {
+public interface AppointmentRepository extends JpaRepository<Appointment, Long> {
     @Query("FROM Appointment a WHERE a.dentist.id = ?1")
-    public List<Appointment> getAllByDentistId(int id);
+    public List<Appointment> getAllByDentistId(Long id);
 
     @Query("FROM Appointment a WHERE a.dentist.id = ?1 AND a.date = ?2")
-    public List<Appointment> getAllByDentistIdAndDate(int id, String date);
+    public List<Appointment> getAllByDentistIdAndDate(Long id, String date);
 
     @Query("FROM Appointment a WHERE a.patient.id = ?1")
-    public List<Appointment> getAllByPatientId(int id);
+    public List<Appointment> getAllByPatientId(Long id);
 }

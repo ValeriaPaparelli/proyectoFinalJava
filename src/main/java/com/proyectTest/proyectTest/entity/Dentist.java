@@ -18,7 +18,7 @@ import java.util.Set;
 public class Dentist {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     private String lastname;
     private String name;
     private int medical_registration;

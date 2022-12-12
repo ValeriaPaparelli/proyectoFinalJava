@@ -19,10 +19,10 @@ public class AppointmentServiceTest {
     @Test
     public void createAppointmentTest(){
         Dentist dentist = new Dentist();
-        dentist.setId(1);
+        dentist.setId(1L);
 
         Patient patient = new Patient();
-        patient.setId(1);
+        patient.setId(1L);
 
         Appointment appointment = new Appointment();
         appointment.setDate("2022-10-04");
@@ -31,12 +31,12 @@ public class AppointmentServiceTest {
 
         appointmentService.create(appointment);
 
-        Optional<AppointmentDto> appointmentDB = appointmentService.getById(2);
+        Optional<AppointmentDto> appointmentDB = appointmentService.getById(2L);
 
         assertTrue(appointmentDB.isPresent());
         assertEquals(appointment.getDate(), "2022-10-04");
-        assertEquals(appointment.getDentist().getId(), 1);
-        assertEquals(appointment.getPatient().getId(), 1);
+        assertEquals(appointment.getDentist().getId(), 1L);
+        assertEquals(appointment.getPatient().getId(), 1L);
     }
 
 }

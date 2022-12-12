@@ -14,7 +14,7 @@ import java.util.Set;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PatientDto {
 
-    private int id;
+    private Long id;
     private String lastname;
     private String name;
     private String address;

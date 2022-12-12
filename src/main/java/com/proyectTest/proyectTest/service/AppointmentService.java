@@ -43,7 +43,7 @@ public class AppointmentService {
         return appointmentDto;
     }
 
-    public List<AppointmentDto> getAllByDentistId(int id){
+    public List<AppointmentDto> getAllByDentistId(Long id){
         ObjectMapper objectMapper = new ObjectMapper();
         List<Appointment> appointments = appointmentRepository.getAllByDentistId(id);
         List<AppointmentDto> appointmentsDto = new ArrayList<>();
@@ -56,7 +56,7 @@ public class AppointmentService {
         return appointmentsDto;
     }
 
-    public List<AppointmentDto> getAllByDentistIdAndDate(int id, String date){
+    public List<AppointmentDto> getAllByDentistIdAndDate(Long id, String date){
         ObjectMapper objectMapper = new ObjectMapper();
         List<Appointment> appointments = appointmentRepository.getAllByDentistIdAndDate(id, date);
         List<AppointmentDto> appointmentsDto = new ArrayList<>();
@@ -69,7 +69,7 @@ public class AppointmentService {
         return appointmentsDto;
     }
 
-    public List<AppointmentDto> getAllByPatientId(int id){
+    public List<AppointmentDto> getAllByPatientId(Long id){
         ObjectMapper objectMapper = new ObjectMapper();
         List<Appointment> appointments = appointmentRepository.getAllByPatientId(id);
         List<AppointmentDto> appointmentsDto = new ArrayList<>();
@@ -82,7 +82,7 @@ public class AppointmentService {
         return appointmentsDto;
     }
 
-    public Optional<AppointmentDto> getById(int id){
+    public Optional<AppointmentDto> getById(Long id){
         ObjectMapper objectMapper = new ObjectMapper();
         AppointmentDto appointmentDto;
 
@@ -107,7 +107,7 @@ public class AppointmentService {
         return appointmentDto;
     }
 
-    public void delete(int id) {
+    public void delete(Long id) {
         appointmentRepository.deleteById(id);
     }
 }

@@ -14,7 +14,7 @@ import javax.persistence.*;
 public class Appointment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     private String date;
 
     @ManyToOne()

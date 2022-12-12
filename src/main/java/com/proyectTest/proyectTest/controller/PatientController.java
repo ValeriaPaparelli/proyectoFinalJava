@@ -30,20 +30,28 @@ public class PatientController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<PatientDto> getById(@PathVariable Integer id){
+    public ResponseEntity<PatientDto> getById(@PathVariable Long id)  {
         PatientDto patientDto = patientService.getById(id).orElse(null);
         return ResponseEntity.ok(patientDto);
     }
 
     @PutMapping()
     public ResponseEntity<PatientDto> update(@RequestBody Patient patient) {
-        return ResponseEntity.ok(patientService.update(patient));
+        if(patient.getId() != null && patientService.getById(patient.getId()) != null) {
+            return ResponseEntity.ok(patientService.update(patient));
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> delete(@PathVariable Integer id) {
-        patientService.delete(id);
-        return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Patient deleted");
+    public ResponseEntity<String> delete(@PathVariable Long id) {
+        if(patientService.getById(id) != null) {
+            patientService.delete(id);
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Paciente Eliminado");
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
     }
 
 }
