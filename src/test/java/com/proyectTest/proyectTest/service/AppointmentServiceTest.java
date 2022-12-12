@@ -16,6 +16,12 @@ public class AppointmentServiceTest {
     @Autowired
     private AppointmentService appointmentService;
 
+    @Autowired
+    private DentistService dentistService;
+
+    @Autowired
+    private PatientService patientService;
+
     @Test
     public void createAppointmentTest(){
         Dentist dentist = new Dentist();
@@ -26,6 +32,7 @@ public class AppointmentServiceTest {
 
         Appointment appointment = new Appointment();
         appointment.setDate("2022-10-04");
+
         appointment.setDentist(dentist);
         appointment.setPatient(patient);
 

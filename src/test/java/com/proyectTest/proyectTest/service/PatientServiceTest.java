@@ -32,6 +32,15 @@ public class PatientServiceTest {
 
     @Test
     public void updatePatientTest(){
+        Patient patient = new Patient();
+        patient.setLastname("Rodriguez");
+        patient.setName("Mateo");
+        patient.setAddress("Aranguren 367");
+        patient.setRegistration_date("2020-02-12");
+        patient.setDni(32456178);
+
+        patientService.create(patient);
+
         Patient patientUpdate = new Patient();
         patientUpdate.setId(1L);
         patientUpdate.setLastname("Lopez");
