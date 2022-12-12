@@ -31,20 +31,29 @@ public class DentistController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<DentistDto> getById(@PathVariable Integer id){
+    public ResponseEntity<DentistDto> getById(@PathVariable Long id) {
         DentistDto dentistDto = dentistService.getById(id).orElse(null);
         return ResponseEntity.ok(dentistDto);
     }
 
     @PutMapping()
     public ResponseEntity<DentistDto> update(@RequestBody Dentist dentist) {
-        return ResponseEntity.ok(dentistService.update(dentist));
+        if(dentist.getId() != null && dentistService.getById(dentist.getId()) != null) {
+            return ResponseEntity.ok(dentistService.update(dentist));
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> delete(@PathVariable Integer id) {
-        dentistService.delete(id);
-        return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Dentist deleted");
+    public ResponseEntity<String> delete(@PathVariable Long id) {
+        if(dentistService.getById(id) != null) {
+            dentistService.delete(id);
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Dentista Eliminado");
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
     }
 
 }

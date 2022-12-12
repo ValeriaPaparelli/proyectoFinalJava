@@ -86,3 +86,18 @@ INFO    2022-12-04 15:18:22,296 [http-nio-8080-exec-2] com.proyectTest.proyectTe
 INFO    2022-12-04 15:24:37,218 [http-nio-8080-exec-3] com.proyectTest.proyectTest.controller.AppointmentController  - Esto es un mensaje
 INFO    2022-12-04 15:24:51,148 [http-nio-8080-exec-5] com.proyectTest.proyectTest.controller.AppointmentController  - Esto es un mensaje
 INFO    2022-12-04 15:28:03,210 [http-nio-8080-exec-2] com.proyectTest.proyectTest.controller.AppointmentController  - Esto es un mensaje
+ERROR   2022-12-12 00:28:56,735 [http-nio-8080-exec-2] com.proyectTest.proyectTest.exceptions.GlobalExceptionHandler  - No value present
+ERROR   2022-12-12 00:30:10,368 [http-nio-8080-exec-4] com.proyectTest.proyectTest.exceptions.GlobalExceptionHandler  - No value present
+ERROR   2022-12-12 00:30:39,751 [http-nio-8080-exec-6] com.proyectTest.proyectTest.exceptions.GlobalExceptionHandler  - Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "asdasd"
+ERROR   2022-12-12 00:32:54,426 [http-nio-8080-exec-8] com.proyectTest.proyectTest.exceptions.GlobalExceptionHandler  - Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "sdfsd"
+ERROR   2022-12-12 00:34:26,466 [http-nio-8080-exec-2] com.proyectTest.proyectTest.exceptions.GlobalExceptionHandler  - Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "sdfsd"
+ERROR   2022-12-12 00:34:41,652 [http-nio-8080-exec-4] com.proyectTest.proyectTest.exceptions.GlobalExceptionHandler  - Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "asdasd"
+ERROR   2022-12-12 00:37:37,987 [http-nio-8080-exec-6] com.proyectTest.proyectTest.exceptions.GlobalExceptionHandler  - No value present
+ERROR   2022-12-12 00:37:48,465 [http-nio-8080-exec-8] com.proyectTest.proyectTest.exceptions.GlobalExceptionHandler  - No value present
+ERROR   2022-12-12 00:38:58,896 [http-nio-8080-exec-1] com.proyectTest.proyectTest.exceptions.GlobalExceptionHandler  - No value present
+ERROR   2022-12-12 00:49:50,248 [http-nio-8080-exec-3] com.proyectTest.proyectTest.exceptions.GlobalExceptionHandler  - Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "sdfsd"
+ERROR   2022-12-12 00:50:08,551 [http-nio-8080-exec-4] com.proyectTest.proyectTest.exceptions.GlobalExceptionHandler  - Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "asdasd"
+ERROR   2022-12-12 00:50:32,518 [http-nio-8080-exec-5] com.proyectTest.proyectTest.exceptions.GlobalExceptionHandler  - No value present
+ERROR   2022-12-12 00:52:12,528 [http-nio-8080-exec-2] com.proyectTest.proyectTest.exceptions.GlobalExceptionHandler  - No value present
+ERROR   2022-12-12 00:53:32,205 [http-nio-8080-exec-6] com.proyectTest.proyectTest.exceptions.GlobalExceptionHandler  - Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "sdfsd"
+ERROR   2022-12-12 00:55:02,706 [http-nio-8080-exec-1] com.proyectTest.proyectTest.exceptions.GlobalExceptionHandler  - Error: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "sdfsd"

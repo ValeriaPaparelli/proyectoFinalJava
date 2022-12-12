@@ -22,7 +22,7 @@ public class DentistServiceTest {
 
         dentistService.create(dentist);
 
-        Optional<DentistDto> dentistDB = dentistService.getById(1);
+        Optional<DentistDto> dentistDB = dentistService.getById(1L);
 
         assertTrue(dentistDB.isPresent());
     }
@@ -30,14 +30,14 @@ public class DentistServiceTest {
     @Test
     public void updateDentistTest(){
         Dentist dentistUpdate = new Dentist();
-        dentistUpdate.setId(1);
+        dentistUpdate.setId(1L);
         dentistUpdate.setLastname("Domingues");
         dentistUpdate.setName("Oscar");
         dentistUpdate.setMedical_registration(124563);
 
         dentistService.update(dentistUpdate);
 
-        Optional<DentistDto> dentistDB = dentistService.getById(1);
+        Optional<DentistDto> dentistDB = dentistService.getById(1L);
 
         assertTrue(dentistDB.get().getLastname().equals("Domingues"));
         assertTrue(dentistDB.get().getName().equals("Oscar"));

@@ -42,7 +42,7 @@ public class PatientService {
         return patientDto;
     }
 
-    public Optional<PatientDto> getById(int id){
+    public Optional<PatientDto> getById(Long id){
         ObjectMapper objectMapper = new ObjectMapper();
         PatientDto patientDto;
 
@@ -71,7 +71,7 @@ public class PatientService {
         return patientDto;
     }
 
-    public void delete(int id) {
+    public void delete(Long id) {
         patientRepository.deleteById(id);
     }
 
